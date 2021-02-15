@@ -1,0 +1,10 @@
+/home/ik/桌面/Service/build/CMakeFiles/rebuild_cache.dir
+/home/ik/桌面/Service/build/CMakeFiles/edit_cache.dir
+/home/ik/桌面/Service/build/src/CMakeFiles/rebuild_cache.dir
+/home/ik/桌面/Service/build/src/CMakeFiles/edit_cache.dir
+/home/ik/桌面/Service/build/src/server/CMakeFiles/rebuild_cache.dir
+/home/ik/桌面/Service/build/src/server/CMakeFiles/ChatServer.dir
+/home/ik/桌面/Service/build/src/server/CMakeFiles/edit_cache.dir
+/home/ik/桌面/Service/build/src/client/CMakeFiles/rebuild_cache.dir
+/home/ik/桌面/Service/build/src/client/CMakeFiles/ChatClient.dir
+/home/ik/桌面/Service/build/src/client/CMakeFiles/edit_cache.dir

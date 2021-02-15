@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/ChatServer.cpp.o -c /home/ik/桌面/Service/src/server/ChatServer.cpp",
+  "file": "/home/ik/桌面/Service/src/server/ChatServer.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/ChatService.cpp.o -c /home/ik/桌面/Service/src/server/ChatService.cpp",
+  "file": "/home/ik/桌面/Service/src/server/ChatService.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/main.cpp.o -c /home/ik/桌面/Service/src/server/main.cpp",
+  "file": "/home/ik/桌面/Service/src/server/main.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/model/FriendModel.cpp.o -c /home/ik/桌面/Service/src/server/model/FriendModel.cpp",
+  "file": "/home/ik/桌面/Service/src/server/model/FriendModel.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/model/GroupModel.cpp.o -c /home/ik/桌面/Service/src/server/model/GroupModel.cpp",
+  "file": "/home/ik/桌面/Service/src/server/model/GroupModel.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/model/OfflineMessageModel.cpp.o -c /home/ik/桌面/Service/src/server/model/OfflineMessageModel.cpp",
+  "file": "/home/ik/桌面/Service/src/server/model/OfflineMessageModel.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/model/UserModel.cpp.o -c /home/ik/桌面/Service/src/server/model/UserModel.cpp",
+  "file": "/home/ik/桌面/Service/src/server/model/UserModel.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/server",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatServer.dir/redis/Redis.cpp.o -c /home/ik/桌面/Service/src/server/redis/Redis.cpp",
+  "file": "/home/ik/桌面/Service/src/server/redis/Redis.cpp"
+},
+{
+  "directory": "/home/ik/桌面/Service/build/src/client",
+  "command": "/usr/bin/g++-7   -I/home/ik/桌面/Service/include -I/home/ik/桌面/Service/include/server -I/home/ik/桌面/Service/include/server/db -I/home/ik/桌面/Service/include/server/model -I/home/ik/桌面/Service/include/server/redis -I/home/ik/桌面/Service/thirdparty  -g -g   -o CMakeFiles/ChatClient.dir/main.cpp.o -c /home/ik/桌面/Service/src/client/main.cpp",
+  "file": "/home/ik/桌面/Service/src/client/main.cpp"
+}
+]
