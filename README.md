@@ -4,11 +4,17 @@
 作者：shenmingik
 
 邮箱：2107810343@qq.com
+
 时间：2021/1/26 22:17
+
 开发环境：Ubuntu VS Code
+
 编译器：g++
+
 数据库：MySQL
+
 编程语言：C++
+
 源码连接：
 [微云链接](https://share.weiyun.com/PTtAqitJ)
 
@@ -35,6 +41,7 @@
 **表User：**
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127144426745.png)
+
 用户登录之后，首先就是进行聊天业务，我们必须要知道该用户的好友都有谁。
 在**加好友**时，我们就可以往这张表里面去写入信息并在**一对一聊天**时查询这里面的信息去看好友是否在线。
 
@@ -47,19 +54,24 @@
 **表OfflineMessage：**
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127145215562.png)
+
 然后便是群组业务了，群组中我们需要有一个记录群组信息的表，方便我们**创建群**时往其中去写入数据；
 
 **表AllGroup：**
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127145609263.png)
+
 同时群里面肯定是有群员的，我们就需要一个记录群成员的表，我们在**加入群**的时候，把用户id写入这个表。并且在**发送群消息**的时候查询这个表由服务器向这些成员转发消息。
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127150030734.png)
 
 ## 数据库模块设计
 在`/include/db/MySQL.hpp`文件中，封装着对数据库的连接、查询、更新、释放连接几个操作。
 
 其是数据库模块中设计的最底层，为上层各个表以及其操作模块提供基础的服务。其关系图如下所示：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127151155139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoZW5taW5neHVlSVQ=,size_16,color_FFFFFF,t_70)
+
 这里要解释几点：
 
 - 名字带有model的类都是对数据库的操作类并不负责存储数据，而像User这个类则是负责暂存从数据库中查询到的数据
@@ -273,6 +285,7 @@ GroupModel group_model_;
 一般来说，一台服务器只能支持1~2w的并发量，但是这是远远不够的，我们需要更高的并发量支持，这个时候就需要引入Nginx tcp长连接负载均衡算法。
 
 当一个新的客户端连接到来时，负载均衡模块便会根据我们在nginx.conf里面设置的参数来分配服务器资源。
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127200450432.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoZW5taW5neHVlSVQ=,size_16,color_FFFFFF,t_70)
 
 按图中所示，客户端只用连接我们的负载均衡服务器，然后服务器就会自动把client连接分配到对应的server服务器。
@@ -281,11 +294,14 @@ GroupModel group_model_;
 如果我一个在server1的用户想要给在server2的用户发送消息要怎么办呢？
 
 是像下面这样把每个服务器连接起来么？
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127201004249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoZW5taW5neHVlSVQ=,size_16,color_FFFFFF,t_70)
 这样肯定不行，服务器之间关联性太强了，一旦多加一个服务器，以前的服务器都要增加一条指向它的连接。
 
 所以，我们可以借鉴交换机连接PC的思想，引入Redis消息队列中间件！
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210127201649999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoZW5taW5neHVlSVQ=,size_16,color_FFFFFF,t_70)
+
 当客户端登录的时候，服务器吧它的id号 subscribe到redis中间件，表示该服务器对这个id发生的事件感兴趣，而Redis收到发送给该id的消息时就会 把消息转发到这个服务器上。
 
 # 集群聊天服务器的思考
